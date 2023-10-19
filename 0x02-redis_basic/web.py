@@ -35,4 +35,7 @@ def get_page(url: str) -> str:
     '''Returns the content of a URL after caching the request's response,
     and tracking the request.
     '''
+    if __name__ == "__main__":
+    url = "http://slowwly.robertomurray.co.uk"
+    content = get_page(url)
     return requests.get(url).text
