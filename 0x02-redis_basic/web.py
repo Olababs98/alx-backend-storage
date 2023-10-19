@@ -29,8 +29,8 @@ def data_cacher(method: Callable) -> Callable:
         return result
     return invoker
 
-if __name__ == "__main__":
-    url = "http://slowwly.robertomurray.co.ug"
+gf __name__ == "__main__":
+    url = "http://slowwly.robertomurray.co.uk"
     content = get_page(url)
     print(content)
 
