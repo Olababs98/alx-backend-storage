@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''A module with tools for request caching and tracking.
 '''
-importgredis
+import redis
 import requests
 from functools import wraps
 from typing import Callable
@@ -28,11 +28,6 @@ def data_cacher(method: Callable) -> Callable:
         redis_store.setex(f'result:{url}', 10, result)
         return result
     return invoker
-
-gf __name__ == "__main__":
-    url = "http://slowwly.robertomurray.co.uk"
-    content = get_page(url)
-    print(content)
 
 
 @data_cacher
