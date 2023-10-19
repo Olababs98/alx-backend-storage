@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''A module with tools for request caching and tracking.
 '''
-import redis
+importgredis
 import requests
 from functools import wraps
 from typing import Callable
@@ -36,3 +36,7 @@ def get_page(url: str) -> str:
     and tracking the request.
     '''
     return requests.get(url).text
+if __name__ == "__main__":
+    url = "http://slowwly.robertomurray.co.uk"
+    content = get_page(url)
+    print(content)
